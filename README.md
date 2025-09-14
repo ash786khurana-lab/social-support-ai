@@ -1,8 +1,8 @@
-📘 Social Support AI – Multimodal Eligibility System
+Social Support AI – Multimodal Eligibility System
 
 This project implements a multimodal AI pipeline that ingests documents (PDF, Excel, DOCX, Image), extracts features, runs ML eligibility checks + LLM reasoning, and provides recommendations through a Streamlit chatbot interface.
 
-⚙️ 1. Prerequisites
+1. Prerequisites
 
 Python 3.10+ (recommended: 3.10 or 3.11)
 
@@ -14,7 +14,7 @@ Ollama (for local LLM hosting, e.g., gemma:2b or llama2)
 
 LangSmith account (optional, for observability)
 
-🏗️ 2. Setup Virtual Environment
+2. Setup Virtual Environment
 # Create venv
 python -m venv venv
 
@@ -24,7 +24,7 @@ venv\Scripts\activate
 # Activate venv (Linux/Mac)
 source venv/bin/activate
 
-📦 3. Install Required Libraries
+3. Install Required Libraries
 
 Install all dependencies:
 
@@ -48,7 +48,7 @@ ollama
 requests
 langsmith
 
-📂 4. Project Structure
+4. Project Structure
 social-support-ai/
 │── agents_orchestration.py   # LangGraph pipeline orchestration
 │── chatbot_demo.py            # Streamlit chatbot UI
@@ -72,7 +72,7 @@ social-support-ai/
 │
 └── manual_checks.log          # Log for admin/manual checks
 
-🧑‍🏫 5. Train the Model
+5. Train the Model
 
 If you want to retrain the eligibility model:
 
@@ -81,7 +81,7 @@ python ml_model.py
 
 This will generate eligibility_model.pkl inside models/.
 
-🚀 6. Run the Application
+6. Run the Application
 6.1 Start Ollama server (new terminal)
 ollama serve
 
@@ -91,7 +91,7 @@ streamlit run chatbot_demo.py
 
 Open the app at http://localhost:8501
 
-🔗 7. Using the Application
+7. Using the Application
 
 Upload 4 files:
 
@@ -115,7 +115,7 @@ Generate LLM reasoning trace (via Ollama)
 
 Provide decision + recommendations
 
-📊 8. Observability with LangSmith
+8. Observability with LangSmith
 
 To enable LangSmith logging:
 
